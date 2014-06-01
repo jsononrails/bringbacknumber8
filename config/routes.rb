@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   
-  get 'petition/new'
-  post 'petition/create'
-
+  get 'petition/sign' => 'petition#new', as: :sign_petition
+  post 'petition/sign' => 'petition#create', as: :sign_petition_create
   root 'petition#index'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

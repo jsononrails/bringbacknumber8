@@ -11,7 +11,7 @@ class PetitionController < ApplicationController
     @entry = Entry.new(entry_params)
     
     if @entry.save
-      redirect_to @entry
+      redirect_to root_path
     else
       render 'new'
     end    
@@ -19,6 +19,12 @@ class PetitionController < ApplicationController
   
   private 
     def entry_params
-      params.require(:entry).permit(:firstname, :lastname)
+      params.require(:entry).permit(
+        :firstname, 
+        :lastname, 
+        :email, 
+        :country, 
+        :provincestate,
+        :show)
     end
 end

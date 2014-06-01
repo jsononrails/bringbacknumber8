@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140531233454) do
+ActiveRecord::Schema.define(version: 20140601160939) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,16 @@ ActiveRecord::Schema.define(version: 20140531233454) do
     t.text     "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "show"
+    t.string   "lat"
+    t.string   "long"
   end
+
+  add_index "entries", ["comment"], name: "index_entries_on_comment", using: :btree
+  add_index "entries", ["country"], name: "index_entries_on_country", using: :btree
+  add_index "entries", ["email"], name: "index_entries_on_email", using: :btree
+  add_index "entries", ["firstname"], name: "index_entries_on_firstname", using: :btree
+  add_index "entries", ["lastname"], name: "index_entries_on_lastname", using: :btree
+  add_index "entries", ["provincestate"], name: "index_entries_on_provincestate", using: :btree
 
 end

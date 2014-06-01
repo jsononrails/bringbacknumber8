@@ -9,6 +9,7 @@ class CreateEntries < ActiveRecord::Migration
       t.text :comment
 
       t.timestamps
+
     end
   end
 end
