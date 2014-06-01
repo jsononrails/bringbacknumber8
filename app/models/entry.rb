@@ -8,5 +8,6 @@ class Entry < ActiveRecord::Base
   validates :email, uniqueness: true
   validates :email, format: { with: /@/, message: "please enter a valid email address" }
   validates :country, presence: true
+  validates :comment, length: { maximum:  150 }
   
 end

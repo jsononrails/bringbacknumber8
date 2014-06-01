@@ -25,6 +25,7 @@ class PetitionController < ApplicationController
         :email, 
         :country, 
         :provincestate,
+        :comment,
         :show)
     end
 end
