@@ -36,7 +36,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
-    composite_primary_keys (7.0.1)
+    composite_primary_keys (7.0.2)
       activerecord (~> 4.1.0)
     erubis (2.7.0)
     execjs (2.1.0)
@@ -48,6 +48,8 @@ GEM
     jquery-rails (3.1.0)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
+    jquery-ui-rails (4.2.1)
+      railties (>= 3.2.16)
     json (1.8.1)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -105,7 +107,7 @@ GEM
       polyglot (>= 0.3.1)
     turbolinks (2.2.2)
       coffee-rails
-    tzinfo (1.2.0)
+    tzinfo (1.2.1)
       thread_safe (~> 0.1)
     uglifier (2.5.0)
       execjs (>= 0.3.0)
@@ -119,6 +121,7 @@ DEPENDENCIES
   composite_primary_keys
   jbuilder (~> 2.0)
   jquery-rails
+  jquery-ui-rails
   pg
   rails (= 4.1.0)
   sass-rails (~> 4.0.3)
