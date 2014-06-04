@@ -14,3 +14,19 @@
  *= require jquery.ui.all
  *= require_self
  */
+body { margin:0; padding:0; background-color:#000; position:relative;}
+.hero-wrapper { position: relative;}
+.hero { width:100%; position:relative; z-index:1;}
+.main-down { display:block; position:absolute; top:83%; left:57%; z-index: 9999;}
+.main-down img { border:none; display:block;}
+.hero-iphone-portrait { width:100%; position:relative; z-index:1;display:none; visibility:hidden;}
+
+/* media queries */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) 
+{ 
+	.hero { display:none; visibility:hidden;}
+	.hero-iphone-portrait { display:block; visibility:visible;}
+}
