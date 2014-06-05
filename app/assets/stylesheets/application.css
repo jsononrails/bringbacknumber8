@@ -89,7 +89,8 @@ and (max-device-width : 1024px)
 and (orientation : portrait)
 and (-webkit-min-device-pixel-ratio: 2) 
 {  
-	.main-down { visibility:hidden; display:none;}
+	.main-down { visibility:hidden; display:none; }
+	.footer { width: 30%;  }
 }
 
 /* iPad Retina Landscape */
