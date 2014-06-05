@@ -14,19 +14,48 @@
  *= require jquery.ui.all
  *= require_self
  */
-
+body { background-color: #000; font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #fff; }
 .hero-wrapper { position: relative;}
-.hero { width:100%; max-width:100%; height:auto; position:relative; z-index:1;}
-.main-down { display:block; position:absolute; top:83%; left:57%; z-index: 9999;}
+.hero { max-width: 100%; width: 100%; height: auto; position:relative; z-index:1;}
+.main-down { display:block; position:absolute; top:79%; left:57%; z-index: 9999;}
 .main-down img { border:none; display:block;}
 .hero-iphone-portrait { width:100%; max-width:100%; height:auto; position:relative; z-index:1;display:none; visibility:hidden;}
 
+/* form fields */
+input[type=text], input[type=password] { padding: 5px; border: 2px solid #ccc; -webkit-border-radius: 5px; border-radius: 5px; }
+input[type=text]:focus { border-color: #333; }
+input[type=submit], button { background: #25A6E1; background: -moz-linear-gradient(top,#25A6E1 0%,#1e3148 100%); background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#25A6E1),color-stop(100%,#188BC0)); background: -webkit-linear-gradient(top,#25A6E1 0%,#188BC0 100%); background: -o-linear-gradient(top,#25A6E1 0%,#188BC0 100%); background: -ms-linear-gradient(top,#25A6E1 0%,#188BC0 100%); background: linear-gradient(top,#25A6E1 0%,#188BC0 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#25A6E1',endColorstr='#188BC0',GradientType=0); padding: 8px 13px; color: #fff; font-family: 'Helvetica Neue' ,sans-serif; font-size: 17px; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border: 1px solid #1A87B9; }
+input[type=submit]:hover, button:hover { background: -moz-linear-gradient(top,#DDDDDD 0%,#ccc 100%); background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#DDDDDD),color-stop(100%,#ccc)); background: -webkit-linear-gradient(top,#DDDDDD 0%,#ccc 100%); background: -o-linear-gradient(top,#DDDDDD 0%,#ccc 100%); background: -ms-linear-gradient(top,#DDDDDD 0%,#ccc 100%); background: linear-gradient(top,#DDDDDD 0%,#ccc 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DDDDDD',endColorstr='#ccc',GradientType=0); color: #444444; cursor: pointer; }
+
+/* details fields styles */
+.details-field { border: 1px dotted gray !important; background: #FBFBFB; color: #000; -webkit-border-radius: 0 !important; -moz-border-radius: 0 !important; -ms-border-radius: 0 !important; -o-border-radius: 0 !important; border-radius:0 !important;}
+
+/* table-less forms */
+.field-row { width: 100%; overflow: hidden; display: block; margin-left: 12px; }
+.field-row .field { float: left; margin-right: 20px; }
+.field-row .field .field-label { color: #d6dde7; display: block; }
+.field-row .field-label { margin-left: 0px; }
+.field-row .field .field-label.inline, .field-row .field .field-value.inline { float: left; margin-right: 10px; margin-top: 0; padding-top: 0; }
+.field-row .field .field-value { display: block; margin-top: 3px; padding: 5px 10px 5px 0px; font-size: 13px; }
+.field-row .field .field-value.details-field { padding: 5px 10px 5px 3px; }
+.field-row.blank { height: 30px; }
+.field-row .field .field-button {display:block; margin-top:17px;}
+
+/* fieldset */
+fieldset { margin: 1em 0; padding: 1em; border: 2px solid #80c7cd; width:85%; margin: 25px auto 0 auto; }
+fieldset p { margin: 2px 12px 10px 10px; }
+fieldset label { display: block; }
+fieldset label.inline { display: inline; }
+
+legend { font-size: 1.1em; font-weight: 600; padding: 2px 4px 8px 4px; color: #006e82; }
+fieldset { margin-bottom: 50px; background: #000; padding-top: 35px; border:none;            -webkit-box-shadow: 4px 4px 8px 0px;             box-shadow:  4px 4px 8px 0px ;            -webkit-border-radius: 10px;            border-radius: 10px;  }
+fieldset legend { text-transform: uppercase; padding-top: 10px; background: #1e3148; color: #fff; font-weight: bold; letter-spacing: 0.25em; }
 /* media queries */
 @-ms-viewport{
   width: device-width;
 }
 
-/* iOS5 Portrait */
+/* iPhone 5 Portrait */
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 568px) 
@@ -37,11 +66,31 @@ and (orientation : portrait)
 	.main-down{ visibility:hidden; display:none; }
 }
 
-/* iOS5 Landscape */
+/* iPhone5 Landscape */
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 568px) 
 and (orientation : landscape) 
 { 
 	.main-down img { width:40%; height:auto; }
+}
+
+/* iPad Retina Portrait */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait)
+and (-webkit-min-device-pixel-ratio: 2) 
+{  
+	.main-down { visibility:hidden; display:none;}
+}
+
+/* iPad Retina Landscape */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 2) 
+{ 
+	.main-down img { width:70%; height:auto; }
 }

@@ -1,1 +1,93 @@
+<fieldset>
+	<legend>Petition Form</legend>
+<%= form_for :entry, url: :sign_petition_create do |f| %>
+  <% if @entry.errors.any? %>
+    <div id="error_explanation">
+	  <h2><%= pluralize(@entry.errors.count, "error") %> prohibited
+	     this petition from being saved:</h2>
+	   <ul>
+	   <% @entry.errors.full_messages.each do |msg| %>
+	     <li><%= msg %></li>
+	   <% end %>
+	   </ul>
+	 </div>
+	 <% end %>
 
+  <span class="field-row">
+	
+	<span class="field">
+		<span class="field-label">
+			<%= f.label :firstname, "First name" %>
+		</span>
+		<span class="field-value">
+			<%= f.text_field :firstname %>
+		</span>
+	</span>
+	
+	<span class="field">
+		<span class="field-label">
+			<%= f.label :lastname, "Last name" %>
+		</span>
+		<span class="field-value">
+			<%= f.text_field :lastname %>
+		</span>
+	</span>
+	
+	<span class="field">
+		<span class="field-label">
+			<%= f.label :email, "Email address" %>
+		</span>
+		<span class="field-value">
+			<%= f.text_field :email %>
+		</span>
+	</span>
+	
+	<span class="field">
+		<span class="field-label">
+			<%= f.label :country %>
+		</span>
+		<span class="field-value">
+			<%= f.text_field :country %>
+		</span>
+	</span>
+	
+	<span class="field">
+		<span class="field-label">
+			<%= f.label :provincestate, "Province/State (optional)" %>
+		</span>
+		<span class="field-value">
+			<%= f.text_field :provincestate %>
+		</span>
+	</span>
+	
+	
+	<span class="field">
+		<span class="field-label">
+		 	<%= f.label :show, "Show your support to the public?" %>
+		</span>
+		<span class="field-value">
+		    <%= f.check_box :show %>
+		</span>
+	</span>
+	
+	<span class="field-row blank"></span>
+	
+	<span class="field">
+		<span class="field-label">
+		 	<%= f.label :comment, "Comment (Optional, 150 characters)" %>
+		</span>
+		<span class="field-value">
+		    <%= f.text_area :comment, cols: 50, rows: 10 %>
+		</span>
+	</span>
+	
+	<span class="field">
+		<span class="field-button">
+ 			<%= f.submit "Sign Petition" %>
+		</span>
+	</span>
+	
+  </span>
+
+<% end %>
+</fieldset>

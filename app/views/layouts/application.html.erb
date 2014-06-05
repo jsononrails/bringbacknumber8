@@ -6,39 +6,17 @@
   <%= csrf_meta_tags %>
   <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
   <meta name="apple-mobile-web-app-capable" content="yes"/>
-  <!--<script type="text/javascript">
-	(function(doc) {
-
-		var addEvent = 'addEventListener',
-		    type = 'gesturestart',
-		    qsa = 'querySelectorAll',
-		    scales = [1, 1],
-		    meta = qsa in doc ? doc[qsa]('meta[name=viewport]') : [];
-
-		function fix() {
-			meta.content = 'width=device-width,minimum-scale=' + scales[0] + ',maximum-scale=' + scales[1];
-			doc.removeEventListener(type, fix, true);
-		}
-
-		if ((meta = meta[meta.length - 1]) && addEvent in doc) {
-			fix();
-			scales = [.25, 1.6];
-			doc[addEvent](type, fix, true);
-		}
-
-	}(document));
-  </script>-->
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </head>
 <body>
 
 <div class="hero-wrapper">
 	<img class="hero" src="bg.jpg" alt="Doctor Who - Bring Back Number 8, #bringbacknumber8"/>
-	<img class="hero-iphone-portrait" src="iphonebg.jpg" alt="Doctor Who - Bring Back Number 8, #bringbacknumber8"/>
+	<!--<img class="hero-iphone-portrait" src="iphonebg.jpg" alt="Doctor Who - Bring Back Number 8, #bringbacknumber8"/>-->
 	<a href="#" class="main-down"><img src="darrow.png" alt="down"/></a>
 </div>
 
 <%= yield %>
 
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>

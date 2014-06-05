@@ -1,6 +1,6 @@
 class PetitionController < ApplicationController
   def index
-    
+     @entry = Entry.new
   end
 
   def new
