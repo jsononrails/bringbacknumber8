@@ -13,7 +13,8 @@ class PetitionController < ApplicationController
     if @entry.save
       redirect_to root_path
     else
-      render 'new'
+      @anchor = "petition"
+      render 'index'
     end    
   end
   

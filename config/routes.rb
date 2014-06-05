@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   resources :search_countries
 
-  get 'petition/sign' => 'petition#new', as: :sign_petition
+  get 'petition/sign' => 'petition#index', as: :sign_petition
   post 'petition/sign' => 'petition#create', as: :sign_petition_create
   root 'petition#index'
   
