@@ -40,4 +40,5 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 gem 'composite_primary_keys'
 gem 'rails_12factor', group: :production
+gem 'heroku-deflater', group: :production
 
