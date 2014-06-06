@@ -1,19 +1,21 @@
-<a name="petition">
+<a name="petition"></a>
 <fieldset>
-	</a><legend>Petition Form</legend>
+	<legend>Petition Form</legend>
 <%= form_for :entry, url: :sign_petition_create do |f| %>
   <% if @entry.errors.any? %>
     <div id="error_explanation">
 	  <h2><%= pluralize(@entry.errors.count, "error") %> prohibited
-	     this petition from being saved:</h2>
-	   <ul>
+	     this petition from being saved!</h2>
+	   <ol>
 	   <% @entry.errors.full_messages.each do |msg| %>
 	     <li><%= msg %></li>
 	   <% end %>
-	   </ul>
+	   </ol>
 	 </div>
 	 <% end %>
-
+	 <% if flash[:notice] != nil %>
+	    <div class="notice"><%= flash[:notice] %></div>
+	  <% end %>
   <span class="field-row">
 	
 	<span class="field">
@@ -78,7 +80,7 @@
 		 	<%= f.label :comment, "Comment (Optional, 150 characters)" %>
 		</span>
 		<span class="field-value">
-		    <%= f.text_area :comment, cols: 50, rows: 10 %>
+		    <%= f.text_area :comment, cols: 50, rows: 10, class: "comments" %>
 		</span>
 	</span>
 	

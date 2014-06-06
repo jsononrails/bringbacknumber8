@@ -15,3 +15,21 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(function() {
+	var petitionPage = {
+		init: function() {
+			var $notice = $(".notice");
+			
+			if($notice !== 'undefined')
+				$notice.delay(3000).fadeOut('slow', function() {
+					window.location.href = "#hero";
+				});
+		},
+	};
+	
+	$(function() {
+		petitionPage.init();
+	});
+}());

@@ -8,12 +8,15 @@ class PetitionController < ApplicationController
   end
 
   def create
+
     @entry = Entry.new(entry_params)
     
     if @entry.save
-      redirect_to root_path
+      flash[:notice] = "Thank you for your support and signing the petition!"
+      redirect_to root_path anchor: "petition"
     else
       @anchor = "petition"
+      flash[:notice] = nil
       render 'index'
     end    
   end
