@@ -39,4 +39,5 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'composite_primary_keys'
+gem 'rails_12factor', group: :production
 
