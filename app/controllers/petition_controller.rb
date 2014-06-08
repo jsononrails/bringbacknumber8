@@ -1,15 +1,13 @@
 class PetitionController < ApplicationController
   def index
      @entry = Entry.new
-  end
-
-  def new
-    @entry = Entry.new
+     @petitionCount = Entry.count
   end
 
   def create
 
     @entry = Entry.new(entry_params)
+    @petitionCount = Entry.count
     
     if @entry.save
       flash[:notice] = "Thank you for your support and signing the petition!"

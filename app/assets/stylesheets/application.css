@@ -63,6 +63,10 @@ fieldset legend { text-transform: uppercase; padding-top: 10px; background: #1e3
 /* flash notice */
 .notice { width: 55%; padding:1em; margin-left:1em; margin-bottom:2em; background:#6abe53; }
 
+/* petition count */
+h1 { font-size: 2.0em; text-align:center; font-weight:600; }
+h2 { font-size: 1.75em; text-align:center; font-weight:600; }
+
 /* media queries */
 @-ms-viewport{
   width: device-width;
