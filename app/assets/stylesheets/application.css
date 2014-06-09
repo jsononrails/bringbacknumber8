@@ -15,6 +15,8 @@
  *= require_self
  */
 body { letter-spacing: 0.25em;background-color: #000; font-family: Arial, Helvetica, sans-serif;  color: #fff; }
+a img {border:none;}
+
 .hero-wrapper { position: relative;}
 .hero { max-width: 100%; width: 100%; height: auto; position:relative; z-index:1;}
 .main-down { display:block; position:absolute; top:79%; left:57%; z-index: 9999;}
@@ -39,7 +41,7 @@ input[type=submit]:hover, button:hover { background: -moz-linear-gradient(top,#D
 .field-row .field .field-label.inline, .field-row .field .field-value.inline { float: left; margin-right: 10px; margin-top: 0; padding-top: 0; }
 .field-row .field .field-value { display: block; margin-top: 3px; padding: 5px 10px 5px 0px; font-size: 1em; }
 .field-row .field .field-value.details-field { padding: 5px 10px 5px 3px; }
-.field-row.blank { height: 30px; }
+.field-row.blank { height: 5px; }
 .field-row .field .field-button {display:block; margin-top:17px;}
 
 /* fieldset */
@@ -125,4 +127,5 @@ and (-webkit-min-device-pixel-ratio: 2)
 { 
 	.main-down img { width:70%; height:auto; }
 	a.twitter-link { height: 2.5em; width: 24em;}
+	.footer { width: 22%; }
 }
