@@ -70,7 +70,7 @@ h1 { font-size: 2.0em; text-align:center; font-weight:600; }
 h2 { font-size: 1.75em; text-align:center; font-weight:600; }
 
 /* twitter link */
-a.twitter-link{display:block; height: 3.5em;width:33em; position: absolute; z-index:999; top: 90%; left: 2%;}
+a.twitter-link{ text-indent: -9999px; display:block; height: 3.5em;width:33em; position: absolute; z-index:999; top: 90%; left: 2%;}
 
 /* media queries */
 @-ms-viewport{
