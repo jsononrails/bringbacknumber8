@@ -9,5 +9,16 @@ class Entry < ActiveRecord::Base
   validates :email, format: { with: /@/, message: "please enter a valid email address" }
   validates :country, presence: true
   validates :comment, length: { maximum:  150 }
+
+  geocoded_by :location
+  after_validation :geocode, if: :country_or_provincestate_changed?
   
+  private
+    def location
+      self.country + "," + self.provincestate
+    end
+    
+    def country_or_provincestate_changed?
+      country_changed? || provincestate_changed?
+    end
 end

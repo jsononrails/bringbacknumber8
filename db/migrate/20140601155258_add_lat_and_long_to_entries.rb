@@ -1,6 +1,6 @@
 class AddLatAndLongToEntries < ActiveRecord::Migration
   def change
-    add_column :entries, :lat, :string
-    add_column :entries, :long, :string
+    add_column :entries, :latitude, :float
+    add_column :entries, :longitude, :float
   end
 end

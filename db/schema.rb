@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 20140602012415) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "show"
-    t.string   "lat"
-    t.string   "long"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   add_index "entries", ["comment"], name: "index_entries_on_comment", using: :btree
