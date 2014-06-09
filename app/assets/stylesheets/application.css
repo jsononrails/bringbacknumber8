@@ -67,6 +67,9 @@ fieldset legend { text-transform: uppercase; padding-top: 10px; background: #1e3
 h1 { font-size: 2.0em; text-align:center; font-weight:600; }
 h2 { font-size: 1.75em; text-align:center; font-weight:600; }
 
+/* twitter link */
+a.twitter-link{display:block; height: 3.5em;width:33em; position: absolute; z-index:999; top: 90%; left: 2%;}
+
 /* media queries */
 @-ms-viewport{
   width: device-width;
@@ -84,8 +87,9 @@ and (orientation : portrait)
 	fieldset { width: 80%;}
 	textarea { width: 90%; }
 	.field { float: left; width: 90%;}
-	.footer{ font-size:0.75em; width: 50%;} 
+	.footer{ font-size:0.75em; width: 60%;} 
 	#error_explanation { width: 80%; }
+	a.twitter-link { height: 2em; width: 17em;}
 }
 
 /* iPhone5 Landscape */
@@ -97,6 +101,7 @@ and (orientation : landscape)
 	.main-down img { width:40%; height:auto; }
 	#error_explanation { width: 80%; }
 	.footer { width: 45%;  }
+	a.twitter-link { height: 1.50em; width: 13em;}
 }
 
 /* iPad Retina Portrait */
@@ -108,6 +113,7 @@ and (-webkit-min-device-pixel-ratio: 2)
 {  
 	.main-down { visibility:hidden; display:none; }
 	.footer { width: 30%;  }
+	a.twitter-link { height: 2em; width: 18em;}
 }
 
 /* iPad Retina Landscape */
@@ -118,4 +124,5 @@ and (orientation : landscape)
 and (-webkit-min-device-pixel-ratio: 2) 
 { 
 	.main-down img { width:70%; height:auto; }
+	a.twitter-link { height: 2.5em; width: 24em;}
 }
