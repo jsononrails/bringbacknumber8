@@ -9,7 +9,7 @@ class PetitionController < ApplicationController
     @entry = Entry.new(entry_params)
     @petitionCount = Entry.count
     
-    if @entry.save
+    if verify_recaptcha(model: @entry) && @entry.save
       flash[:notice] = "Thank you for your support and signing the petition!"
       redirect_to root_path anchor: "petition"
     else

@@ -4,7 +4,7 @@
 <%= form_for :entry, url: :sign_petition_create do |f| %>
   <% if @entry.errors.any? %>
     <div id="error_explanation">
-	  <h2><%= pluralize(@entry.errors.count, "error") %> prohibited
+	  <h2 class="main_header"><%= pluralize(@entry.errors.count, "error") %> prohibited
 	     this petition from being saved!</h2>
 	   <ol>
 	   <% @entry.errors.full_messages.each do |msg| %>
@@ -85,17 +85,52 @@
 	</span>
 	
 	<span class="field">
-		<span class="field-button">
- 			<%= f.submit "Sign Petition" %>
-		</span>
+	  <span class="field-button">	
+	    <%= recaptcha_tags display: { theme: "custom", custom_theme_widget: 'recaptcha_widget' }%>
+		<span id="recaptcha_widget" style="display:none">
+
+		   <span class="recaptcha_image_custom" id="recaptcha_image"></span>
+		   <span class="recaptcha_only_if_incorrect_sol" style="color:red">Incorrect please try again</span>
+
+		   <span class="recaptcha_only_if_image">Enter the words above:</span>
+		   <span class="recaptcha_only_if_audio">Enter the numbers you hear:</span>
+
+		   <input type="text" id="recaptcha_response_field" name="recaptcha_response_field" />
+
+		   <span class="recaptcha_menu">
+		   	<span class="recaptcha_menu_item"><a href="javascript:Recaptcha.reload()">refresh</a>|</span>
+			   <span class="recaptcha_only_if_image recaptcha_menu_item"><a href="javascript:Recaptcha.switch_type('audio')">audio</a>|</span>
+			   <span class="recaptcha_only_if_audio recaptcha_menu_item"><a href="javascript:Recaptcha.switch_type('image')">image</a></span>
+			   <span class="recaptcha_menu_item"><a href="javascript:Recaptcha.showhelp()">help</a></span>
+		   </span>
+		 </span>
+
+		 <script type="text/javascript"
+		    src="http://www.google.com/recaptcha/api/challenge?k=6LcoDfUSAAAAABmCotD6GuH4Lore428J6tf7F3Wu">
+		 </script>
+		 <noscript>
+		   <iframe src="http://www.google.com/recaptcha/api/noscript?k=6LcoDfUSAAAAABmCotD6GuH4Lore428J6tf7F3Wu"
+		        height="300" width="500" frameborder="0"></iframe><br>
+		   <textarea name="recaptcha_challenge_field" rows="3" cols="40">
+		   </textarea>
+		   <input type="hidden" name="recaptcha_response_field"
+		        value="manual_challenge">
+		 </noscript>
+	  </span>	
 	</span>
 	
 	<span class="field">
+		<span class="field-button">
+ 			<%= f.submit "Sign Petition", class: "main_submit" %>
+		</span>
+	</span>
+	
+	<span class="field signed_count">
 		<span class="field-label">
-		 	<h1># of Whovians signed</h1>
+		 	<h1 class="main_header"># of Whovians signed</h1>
 		</span>
 		<span class="field-value">
-		    <h2><%= @petitionCount || 0 %></h2>
+		    <h2 class="main_header"><%= @petitionCount || 0 %></h2>
 		</span>
 	</span>
 	

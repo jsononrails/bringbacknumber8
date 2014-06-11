@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   
   get 'petition/sign' => 'petition#index', as: :sign_petition
   post 'petition/' => 'petition#index'
+  get 'petition/' => 'petition#index'
   post 'petition/sign' => 'petition#create', as: :sign_petition_create
   root 'petition#index'
   

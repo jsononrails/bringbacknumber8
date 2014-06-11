@@ -44,5 +44,6 @@ gem 'rack-zippy'
 gem 'geocoder'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
+gem "recaptcha", :require => "recaptcha/rails"
 
 
