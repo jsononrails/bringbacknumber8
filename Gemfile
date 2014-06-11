@@ -42,5 +42,7 @@ gem 'composite_primary_keys'
 gem 'rails_12factor', group: :production
 gem 'rack-zippy'
 gem 'geocoder'
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'devise'
 
 
