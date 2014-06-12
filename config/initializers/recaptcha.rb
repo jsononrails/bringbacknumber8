@@ -1,5 +1,4 @@
 Recaptcha.configure do |config|
-  config.public_key  = '6LcoDfUSAAAAABmCotD6GuH4Lore428J6tf7F3Wu'
-  config.private_key = '6LcoDfUSAAAAAJmBtO4hEgNapahFZaAi_DAAF9xF'
-  #config.proxy = 'http://www.google.com/recaptcha/api/verify'
+  config.public_key  = ENV['PUBLIC_CAPTCHA_KEY'].gsub(/\s+/, "")
+  config.private_key = ENV['PRIVATE_CAPTCHA_KEY'].gsub(/\s+/, "")
 end
