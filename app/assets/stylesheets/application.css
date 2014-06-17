@@ -81,7 +81,7 @@ a.twitter-link{ text-indent: -9999px; display:block; height: 3.5em;width:33em; p
 #recaptcha_audio_play_again, #recaptcha_audio_download {color:#25A6E1; font-size: 1em; cursor: pointer; text-decoration: none;}
 #recaptcha_audio_download {display:block;margin-top:10px;}
 
-.footer iframe { margin-bottom: 10px;}
+.footer iframe { margin-bottom: 10px; }
 
 /* write up */
 .writeup { width:70%; margin: 45px auto 45px auto; }
@@ -112,6 +112,8 @@ and (orientation : portrait)
 	#recaptcha_response_field { width: 100%; }
 	.recaptcah_link a{ padding-right: 0; }
 	.recaptcah_link { display:block; float: left;}
+	.footer iframe { width:60% !important; }
+	.writeup { width: 83%;margin-top:15px; }
 }
 
 /* iPhone5 Landscape */
@@ -124,6 +126,7 @@ and (orientation : landscape)
 	#error_explanation { width: 80%; }
 	.footer { width: 45%;  }
 	a.twitter-link { height: 1.50em; width: 13em;}
+	.writeup { width: 83%;margin-top:15px; }
 }
 
 /* iPad Retina Portrait */
