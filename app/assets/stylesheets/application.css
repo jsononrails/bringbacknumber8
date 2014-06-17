@@ -77,11 +77,16 @@ a.twitter-link{ text-indent: -9999px; display:block; height: 3.5em;width:33em; p
 #recaptcha_widget { margin-left:0;}
 #recaptcha_image { display:block; margin-bottom: 20px;}
 #recaptcha_response_field { width: 100%; margin-bottom: 15px;}
-.recaptcah_link a { color:#25A6E1; font-size: 1em; padding-right: 0.5em; text-decoration:none;}
+.recaptcah_link a, .writeup a { color:#25A6E1; font-size: 1em; padding-right: 0.5em; text-decoration:none;}
 #recaptcha_audio_play_again, #recaptcha_audio_download {color:#25A6E1; font-size: 1em; cursor: pointer; text-decoration: none;}
 #recaptcha_audio_download {display:block;margin-top:10px;}
 
 .footer iframe { margin-bottom: 10px;}
+
+/* write up */
+.writeup { width:70%; margin: 45px auto 45px auto; }
+.writeup p { margin: 1em 0; line-height: 1.5em; font-weight: normal; }
+
 /* media queries */
 @-ms-viewport{
   width: device-width;
