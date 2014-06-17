@@ -109,10 +109,10 @@
 		</span>
 
 	 <script type="text/javascript"
-	    src="https://www.google.com/recaptcha/api/challenge?k=<%= ENV['PUBLIC_CAPTCHA_KEY'].gsub(/\s+/, "") %>">
+	    src="https://www.google.com/recaptcha/api/challenge?k=<%= ENV['PUBLIC_CAPTCHA_KEY'].to_s.gsub(/\s+/, "") %>">
 	 </script>
 	 <noscript>
-	   <iframe src="https://www.google.com/recaptcha/api/noscript?k=<%= ENV['PUBLIC_CAPTCHA_KEY'].gsub(/\s+/, "") %>"
+	   <iframe src="https://www.google.com/recaptcha/api/noscript?k=<%= ENV['PUBLIC_CAPTCHA_KEY'].to_s.gsub(/\s+/, "") %>"
 	        height="300" width="500" frameborder="0"></iframe><br>
 	   <textarea name="recaptcha_challenge_field" rows="3" cols="40">
 	   </textarea>

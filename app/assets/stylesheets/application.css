@@ -80,6 +80,8 @@ a.twitter-link{ text-indent: -9999px; display:block; height: 3.5em;width:33em; p
 .recaptcah_link a { color:#25A6E1; font-size: 1em; padding-right: 0.5em; text-decoration:none;}
 #recaptcha_audio_play_again, #recaptcha_audio_download {color:#25A6E1; font-size: 1em; cursor: pointer; text-decoration: none;}
 #recaptcha_audio_download {display:block;margin-top:10px;}
+
+.footer iframe { margin-bottom: 10px;}
 /* media queries */
 @-ms-viewport{
   width: device-width;
