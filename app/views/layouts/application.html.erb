@@ -12,6 +12,11 @@
 <body>
 <a name="hero"></a>
 <div class="hero-wrapper">
+	<ul>
+		<% @randomComments.each do |entry| %>
+			<li><%= entry.comment %></li>
+		<% end %>
+	</ul>
 <a class="twitter-link" href="http://www.twitter.com/share?url=www.bringbacknumber8.com&text=Sign+the+Paul+McGann+Doctor+Who Spinoff+Petition+%23bringbacknumber8" target="_new" title="Share on Twitter">#bringbacknumber8</a>
 	
 	<a href="/"><%= image_tag("bg.jpg",  alt: "Doctor Who - Bring Back Number 8 Paul McGann Spinoff Petition, #bringbacknumber8", class: "hero") %>
