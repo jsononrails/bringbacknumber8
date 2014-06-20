@@ -42,6 +42,8 @@ $(function() {
 		direction: 'up',
 		position: 'absolute'
 		});
+		
+		$("#user-comments ul li").delay(800).show();
 	});
 }());
 

@@ -102,6 +102,7 @@ div#user-comments ul {
 #user-comments ul li {
 	display:block;
 	margin-bottom: 1em;
+	display:none;
 }
 
 .commenter-wrap {
