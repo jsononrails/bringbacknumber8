@@ -17,6 +17,8 @@ class PetitionController < ApplicationController
       redirect_to root_path anchor: "petition"
     else
       @anchor = "petition"
+      rand_id = rand(Entry.count)
+       @randomComments = Entry.select('comment, firstname, lastname, country').where("comment != '' and show = true").limit(25).order("RANDOM()")
       flash[:notice] = nil
       render 'index'
     end    
