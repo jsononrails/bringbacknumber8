@@ -4,7 +4,7 @@ class PetitionController < ApplicationController
      @petitionCount = Entry.count
      
      rand_id = rand(Entry.count)
-     @randomComments = Entry.select('comment').where("comment != '' and show = true").limit(5).order("RANDOM()")
+     @randomComments = Entry.select('comment, firstname, lastname, country').where("comment != '' and show = true").limit(5).order("RANDOM()")
   end
 
   def create

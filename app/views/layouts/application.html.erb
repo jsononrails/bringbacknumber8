@@ -12,11 +12,21 @@
 <body>
 <a name="hero"></a>
 <div class="hero-wrapper">
+	<div id="user-comments" style="position:absolute;
+	z-index: 9999;
+	top: 2em;
+	right: 0;">
 	<ul>
 		<% @randomComments.each do |entry| %>
-			<li><%= entry.comment %></li>
+		<li>
+			<span class="commenter-comment">"<%= entry.comment %>"</span>
+			<span class="commenter-wrap">
+				<span class="commenter-name">-<%= raw"#{entry.firstname + ' ' + entry.lastname + ', <span class="commenter-country">' + entry.country}</span>" %></span>		
+			</span>
+		</li>
 		<% end %>
 	</ul>
+	</div>
 <a class="twitter-link" href="http://www.twitter.com/share?url=www.bringbacknumber8.com&text=Sign+the+Paul+McGann+Doctor+Who Spinoff+Petition+%23bringbacknumber8" target="_new" title="Share on Twitter">#bringbacknumber8</a>
 	
 	<a href="/"><%= image_tag("bg.jpg",  alt: "Doctor Who - Bring Back Number 8 Paul McGann Spinoff Petition, #bringbacknumber8", class: "hero") %>

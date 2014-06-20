@@ -31,6 +31,16 @@ $(function() {
 	
 	$(function() {
 		petitionPage.init();
+		$("#user-comments").vTicker({
+		speed: 500,
+		pause: 5000,
+		showItems: 1,
+		animation: 'fade',
+		mousePause: false,
+		height: 0,
+		direction: 'up',
+		position: 'absolute'
+		});
 	});
 }());
 
